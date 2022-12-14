@@ -1,8 +1,9 @@
 #include "main.h"
 
- /**
-  * print_alphabet - Prints lowercase alphabets with putchar
-  */
+/**
+ * print_alphabet - Prints all letters in lowercase
+ */
+
 void print_alphabet(void)
 {
 	char i;
