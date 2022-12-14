@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - Checks for letter input
- * @c - variable to be checked
+ * @c: variable to be checked
  *
  * Return: 1 If letter letter is found and 0 otherwise
  */
