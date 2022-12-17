@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+* print_triangle - prints triangle cith # character
+* @size: breadth and height of triangle
+*/
 void print_triangle(int size)
 {
 	int x, y, z;
