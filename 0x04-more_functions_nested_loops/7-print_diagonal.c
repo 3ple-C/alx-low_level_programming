@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
-* print_line - prints a backslash on terminal
-* @n: numder of \ characters printed
+* print_diagonal - prints a backslash on terminal
+* @n: number of \ characters printed
 */
 void print_diagonal(int n)
 {
 	int x, y;
 
-	if (n <= 0)
-		_putchar('\n');
-	else
+	if (n > 0)
 	{
 		for (x = 0; x < n; x++)
 		{
@@ -21,6 +19,9 @@ void print_diagonal(int n)
 
 			_putchar('\n');
 		}
-
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
