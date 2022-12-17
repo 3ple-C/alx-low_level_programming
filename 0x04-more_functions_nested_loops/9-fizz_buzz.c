@@ -29,6 +29,6 @@ int main(void)
 		}
 	}
 
-	printf("\n");
+	printf("\nBuzz");
 	return (0);
 }
