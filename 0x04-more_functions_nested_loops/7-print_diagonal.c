@@ -4,7 +4,7 @@
 * print_line - prints a backslash on terminal
 * @n: numder of \ characters printed
 */
-void print_daigonal(int n)
+void print_diagonal(int n)
 {
 	int x, y;
 
@@ -12,9 +12,9 @@ void print_daigonal(int n)
 		_putchar('\n');
 	else
 	{
-		for (x = 0; x <= n; x++)
+		for (x = 0; x < n; x++)
 		{
-			for (y = 0; y <= n; y++)
+			for (y = 0; y < n; y++)
 			{
 				_putchar('\\');
 			}
