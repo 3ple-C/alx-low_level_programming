@@ -2,7 +2,7 @@
 
 /**
 * print_rev - prints string in reverse
-* @s string to print
+* @s: string to print
 */
 void print_rev(char *s)
 {
@@ -13,7 +13,7 @@ void print_rev(char *s)
 		c++;
 	}
 
-	for (c -= 1; c >= 0; c++)
+	for (c -= 1; c >= 0; c--)
 	{
 		_putchar(s[c]);
 	}
