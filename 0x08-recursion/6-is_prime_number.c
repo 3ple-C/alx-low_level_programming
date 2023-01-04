@@ -12,7 +12,7 @@ int is_prime_recursive(int n, int divisor)
 	if (n <= 1)
 		return (0);
 
-	if ((divisor *divisor) > n)
+	if ((divisor * divisor) > n)
 		return (1);
 
 	if (n % divisor == 0)
