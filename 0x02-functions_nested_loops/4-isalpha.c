@@ -13,7 +13,7 @@ int _isalpha(int c)
 
 	for (i = 97; i <= 122; i++)
 	{
-		for (j = 65; j<= 90; j++)
+		for (j = 65; j <= 90; j++)
 		{
 			if (i == c || j == c)
 				return (1);
