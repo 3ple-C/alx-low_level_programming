@@ -1,54 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
-  * argstostr - convert the params passed to the program to string
-  * @ac: the argument count
-  * @av: the argument vector
-  *
-  * Return: Nothing
-  */
+ * argstostr - concatenates all the arguments of a program.
+ * @ac: argument count.
+ * @av: argument vector.
+ *
+ * Return: pointer of an array of char
+ */
 char *argstostr(int ac, char **av)
 {
-	int ch = 0, i = 0, j = 0, k = 0;
-	char *s;
+	char *aout;
+	int c, i, j, ia;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
 		return (NULL);
 
-	while (i < ac)
+	for (c = i = 0; i < ac; i++)
 	{
-		while (av[i][j])
-		{
-			ch++;
-			j++;
-		}
+		if (av[i] == NULL)
+			return (NULL);
 
-		j = 0;
-		i++;
+		for (j = 0; av[i][j] != '\0'; j++)
+			c++;
+		c++;
 	}
 
-	s = malloc((sizeof(char) * ch) + ac + 1);
+	aout = malloc((c + 1) * sizeof(char));
 
-	i = 0;
-	while (av[i])
+	if (aout == NULL)
 	{
-		while (av[i][j])
-		{
-			s[k] = av[i][j];
-			k++;
-			j++;
-		}
-
-		s[k] = '\n';
-
-		j = 0;
-		k++;
-		i++;
+		free(aout);
+		return (NULL);
 	}
 
-	k++;
-	s[k] = '\0';
-	return (s);
+	for (i = j = ia = 0; ia < c; j++, ia++)
+	{
+		if (av[i][j] == '\0')
+		{
+			aout[ia] = '\n';
+			i++;
+			ia++;
+			j = 0;
+		}
+		if (ia < c - 1)
+			aout[ia] = av[i][j];
+	}
+	aout[ia] = '\0';
+
+	return (aout);
 }
